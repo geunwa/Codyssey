@@ -92,7 +92,7 @@ Format: [1] Summary [2] Draft (H2, Short sentences) [3] Check-list.
 Brand: DdoLab / Product: Wireless Fan / Specs: 14-inch, 3200mAh, 32h wireless, BLDC.
 ```
 
-* **[선택 2] 한 가이드라인 버전 (국내 가독성 및 직관적 수정용)**
+* **[선택 2] 한글 가이드라인 버전 (국내 가독성 및 직관적 수정용)**
   
 ```markdown
 # 시스템 명령어
