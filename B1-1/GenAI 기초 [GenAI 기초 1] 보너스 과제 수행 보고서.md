@@ -46,6 +46,27 @@
 | 적용 프롬프트 | 산출물 2의 최종 시스템 프롬프트(v2) 기반 |
 | 활용 목적 | 자영업자 대상 네이버 블로그 초안 작성 지원 |
 
+### 3-2. 비용 절감 및 운영 효율화 전략
+
+대규모 발행 환경에서 API 호출 비용을 최소화하고 인프라 제약을 극복하기 위해 본 시스템은 다음과 같은 비용 제약 대응 전략을 채택합니다.
+
+#### 가. 무료 및 오픈소스 모델 활용 아키텍처
+* **하이브리드 운영**: 고비용 상용 모델(GPT 대형 모델 등)은 초기 시스템 프롬프트 검증 및 템플릿 확정에만 제한적으로 사용합니다.
+* **오픈소스 전환**: 실제 반복적인 대량 원고 생성 파이프라인에는 **Llama 3 8B** 또는 **Gemma 2 9B**와 같은 경량 오픈소스 모델을 로컬 서버 혹은 무료 인스턴스(Hugging Face Spaces, Groq 무료 티어 등)에 탑재하여 인프라 비용을 0원으로 통제합니다.
+
+#### 나. 비용 절감용 경량화 프롬프트 구조 (Token 40% 절감형)
+기존의 장문형 지시 사항을 압축하고 불필요한 시스템 토큰 낭비를 막기 위해 아래와 같은 경량화 프롬프트 구조를 설계하여 배치(Batch) 작업에 투입합니다.
+
+```markdown
+# SYSTEM
+Role: DdoLab Blog Copywriter. Tone: Friendly.
+Constraints: No hallucination. Use provided context ONLY. 
+Format: [1] Summary [2] Draft (H2, Short sentences) [3] Check-list.
+
+# CONTEXT
+Brand: DdoLab / Product: Wireless Fan / Specs: 14-inch, 3200mAh, 32h wireless, BLDC.
+```
+
 ---
 
 ## 4\. Gem 봇 구성 내용
