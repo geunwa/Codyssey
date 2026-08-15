@@ -245,6 +245,10 @@ X:
 
 이를 통해 생성 결과를 누적 관리하고, 팀원 간 공유 및 검토가 가능하도록 구성했습니다.
 
+### ※ [Notion 데이터베이스 바로가기](https://app.notion.com/p/3afbaebcedcf8016baf3df66deb8413b?v=3afbaebcedcf804eba7e000c3c97e5dd&source=copy_link)
+
+자동화 과정에서 생성된 콘텐츠와 이미지 링크, 요청 정보 등의 결과물을 Notion 데이터베이스에 저장·기록하여 관리하고 있다.
+
 ---
 
 ## 기대효과
